@@ -47,7 +47,7 @@ public class MainPageTest {
     }
 
     @Test
-    @DisplayName("Редирект на страницу Авторы")
+    @DisplayName("Редирект на страницу Авторы со страницы Разработка")
     public void authors(){
         WebElement allStreams = driver.findElement(By.xpath("//nav/a[contains(text(), 'Разработка')]"));
         allStreams.click();
