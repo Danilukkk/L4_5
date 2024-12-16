@@ -40,8 +40,7 @@ public class MainPageTest {
     public void news() {
         WebElement news = driver.findElement(By.xpath("//li//a[contains(text(), 'Новости')]"));
         news.click();
-        List<WebElement> newsPage = driver.findElements(By.xpath("//span/a[contains(text(), 'Новости') " +
-        "and contains(@class,'tm-tabs__tab-link_active' )]"));
+        List<WebElement> newsPage = driver.findElements(By.xpath("//span/a[contains(text(), 'Новости') " + "and contains(@class,'tm-tabs__tab-link_active' )]"));
         assertFalse(newsPage.isEmpty(), "newsPage не найден");
     }
 
@@ -56,8 +55,5 @@ public class MainPageTest {
         for (WebElement thisOne : nameList) {
             assertEquals("Имя", thisOne.getText(), "Имя не найдено");
         }
-
     }
-
-
 }
